@@ -36,6 +36,7 @@ class Dashboard extends Component {
 
   //delete house func
   deleteHouse(id){
+      console.log(id)
       axios.delete(`./api/house/${id}`)
       .then(res => {
           this.setState({houses: res.data})

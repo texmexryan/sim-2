@@ -30,8 +30,8 @@ module.exports = {
         let {id} = req.params;
 
         db.delete_house({id})
-        .then(res => {
-        res.status(200).send(posts)})
+        .then(houses => {
+        res.status(200).send(houses)})
       .catch(err => {
           res.status(500).send(err);
           console.log(err);
